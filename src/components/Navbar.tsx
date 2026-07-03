@@ -41,6 +41,11 @@ export default function Navbar() {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // On the home page hero, hide the navbar entirely (hero has its own header)
+  const isHomeAtTop = location.pathname === '/' && !scrolled;
+
+  if (isHomeAtTop) return null;
+
   return (
     <nav
       className={cn(
