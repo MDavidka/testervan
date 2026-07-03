@@ -79,6 +79,17 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+            <Link
+              to="/login"
+              className={cn(
+                'text-sm font-medium transition-colors',
+                isActive('/login')
+                  ? 'text-accent-500'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
+              )}
+            >
+              Sign In
+            </Link>
             <button
               onClick={toggleDark}
               className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -133,6 +144,18 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              to="/login"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                'block px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+                isActive('/login')
+                  ? 'bg-accent-50 dark:bg-accent-950 text-accent-600 dark:text-accent-400'
+                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900'
+              )}
+            >
+              Sign In
+            </Link>
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
