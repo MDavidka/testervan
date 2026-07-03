@@ -75,53 +75,61 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent-50 via-white to-blue-50 dark:from-gray-950 dark:via-accent-950/20 dark:to-gray-950" />
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background image */}
+        <img
+          src="https://images.unsplash.com/photo-1635776062360-af423602aff3?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Abstract background with color gradients"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-100 dark:bg-accent-950/50 text-accent-700 dark:text-accent-300 text-sm font-medium mb-6">
-              <Zap className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium mb-6 border border-white/10">
+              <Zap className="h-4 w-4 text-accent-400" />
               <span>New: Global Edge Network now live</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance text-white mb-6">
               Host your site
               <br />
-              <span className="bg-gradient-to-r from-accent-500 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-accent-400 to-blue-300 bg-clip-text text-transparent">
                 at the speed of light
               </span>
             </h1>
-            <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 text-balance">
+            <p className="max-w-2xl mx-auto text-lg sm:text-xl text-white/80 mb-8 text-balance">
               Enterprise-grade cloud hosting for modern teams. Deploy globally in seconds,
               scale infinitely, and sleep soundly with our 99.99% uptime guarantee.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/pricing">
-                <Button size="lg">
+                <Button size="lg" className="bg-white text-accent-600 hover:bg-gray-100 shadow-xl shadow-black/20">
                   View Plans
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" size="lg">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white/30 text-white hover:bg-white/10"
+                >
                   Talk to Sales
                 </Button>
               </Link>
             </div>
-            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-500 dark:text-gray-500">
+            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white/70">
               <div className="flex items-center gap-1.5">
-                <CheckCircle className="h-4 w-4 text-green-500" />
+                <CheckCircle className="h-4 w-4 text-green-400" />
                 <span>No hidden fees</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle className="h-4 w-4 text-green-500" />
+                <CheckCircle className="h-4 w-4 text-green-400" />
                 <span>Free migration</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle className="h-4 w-4 text-green-500" />
+                <CheckCircle className="h-4 w-4 text-green-400" />
                 <span>30-day guarantee</span>
               </div>
             </div>
@@ -233,7 +241,7 @@ export default function Home() {
                   size="lg"
                   className="border-white/30 text-white hover:bg-white/10"
                 >
-                  Schedule a Demo
+                  Talk to Sales
                 </Button>
               </Link>
             </div>
